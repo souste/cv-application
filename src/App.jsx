@@ -10,10 +10,16 @@ function App() {
   return (
     <>
       <h1>CV Creator</h1>
-      <PersonalDetails />
-      <Education />
-      <Experience />
-      <CVTemplate />
+      <div className="outer-container">
+        <div className="form-container">
+          <PersonalDetails />
+          <Education />
+          <Experience />
+        </div>
+        <div className="template-container">
+          <CVTemplate />
+        </div>
+      </div>
     </>
   );
 }
