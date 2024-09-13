@@ -62,3 +62,9 @@
 .degree {
   margin: 0;
 }
+
+.cv-experience-container,
+.cv-education-container {
+  padding-left: 10px;
+  padding-right: 10px;
+}
