@@ -7,6 +7,13 @@ import CVTemplate from "./CVTemplate";
 import "./App.css";
 
 function App() {
+  // const getData = (data) => {
+  //   // const firstName = "";
+  //   // console.log(firstName);
+  //   console.log("FirstName coming from App.js", data);
+  //   console.log("Surname coming from App.js", data);
+  // };
+
   return (
     <>
       <div className="outer-container">

@@ -3,7 +3,7 @@ function CVTemplate() {
     <>
       <div className="cv-template-container">
         <div className="cv-template-top">
-          <h2 className="cv-name">Stephen Souness</h2>
+          <h2 className="cv-name">JOE BLOGGS</h2>
           <div className="personal-info-container">
             <p>joebloggs@outlook.com</p>
             <p>07000 000 000</p>
