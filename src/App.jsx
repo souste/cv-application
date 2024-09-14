@@ -7,9 +7,29 @@ import CVTemplate from "./CVTemplate";
 import "./App.css";
 
 function App() {
-  const [personalData, setPersonalData] = useState({});
-  const [educationData, setEducationData] = useState({});
-  const [experienceData, setExperienceData] = useState({});
+  const [personalData, setPersonalData] = useState({
+    firstName: "JOE",
+    surname: "BLOGGS",
+    email: "joebloggs@example.com",
+    number: "07000000000",
+    location: "Manchester",
+  });
+  const [educationData, setEducationData] = useState({
+    school: "University of Manchester",
+    degree: "BSc Chemistry",
+    classification: "First",
+    startDate: "2020-09-01",
+    endDate: "2023-07-01",
+  });
+  const [experienceData, setExperienceData] = useState({
+    companyName: "The Frog Company",
+    position: "Astrophysicist",
+    startDate: "2020-09-01",
+    endDate: "2023-07-01",
+    location: "Manchester",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  });
 
   const getPersonalData = (data) => {
     setPersonalData(data);
