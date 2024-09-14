@@ -1,66 +1,60 @@
 import { useState } from "react";
 
-function PersonalDetails() {
-  const [firstName, setFirstName] = useState("");
-  const [surname, setSurname] = useState("");
-  const [email, setEmail] = useState("");
-  const [number, setNumber] = useState("");
-  const [location, setLocation] = useState("");
+function PersonalDetails(props) {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    surname: "",
+    email: "",
+    number: "",
+    location: "",
+  });
 
-  const handleFirstNameChange = (event) => {
-    setFirstName(event.target.value);
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
   };
 
-  const handleSurnameChange = (event) => {
-    setSurname(event.target.value);
-  };
-
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value);
-  };
-
-  const handleNumberChange = (event) => {
-    setNumber(event.target.value);
-  };
-
-  const handleLocationChange = (event) => {
-    setLocation(event.target.value);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    props.onSubmit(formData);
   };
 
   return (
     <>
       <h2>Personal Details</h2>
-      <p>{firstName}</p>
-      <p>{surname}</p>
-      <p>{email}</p>
-      <p>{number}</p>
-      <p>{location}</p>
+      <p>{formData.firstName}</p>
+      <p>{formData.surname}</p>
+      <p>{formData.email}</p>
+      <p>{formData.number}</p>
+      <p>{formData.location}</p>
 
-      <form className="personal-details-container">
+      <form className="personal-details-container" onSubmit={handleSubmit}>
         <label>
           First Name:
-          <input type="text" value={firstName} onChange={handleFirstNameChange} />
+          <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} />
         </label>
 
         <label>
           Surname:
-          <input type="text" value={surname} onChange={handleSurnameChange} />
+          <input type="text" name="surname" value={formData.surname} onChange={handleChange} />
         </label>
 
         <label>
           Email
-          <input type="email" value={email} onChange={handleEmailChange} />
+          <input type="email" name="email" value={formData.email} onChange={handleChange} />
         </label>
 
         <label>
           Phone:
-          <input type="number" value={number} onChange={handleNumberChange} />
+          <input type="number" name="number" value={formData.number} onChange={handleChange} />
         </label>
 
         <label>
           Location:
-          <input type="text" value={location} onChange={handleLocationChange} />
+          <input type="text" name="location" value={formData.location} onChange={handleChange} />
         </label>
+
+        <button type="submit">Submit</button>
       </form>
     </>
   );

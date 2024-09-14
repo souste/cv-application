@@ -7,18 +7,14 @@ import CVTemplate from "./CVTemplate";
 import "./App.css";
 
 function App() {
-  // const getData = (data) => {
-  //   // const firstName = "";
-  //   // console.log(firstName);
-  //   console.log("FirstName coming from App.js", data);
-  //   console.log("Surname coming from App.js", data);
-  // };
-
+  const getPersonalData = (data) => {
+    console.log("This is the first name coming from App", data);
+  };
   return (
     <>
       <div className="outer-container">
         <div className="form-container">
-          <PersonalDetails />
+          <PersonalDetails onSubmit={getPersonalData} />
           <Education />
           <Experience />
         </div>
