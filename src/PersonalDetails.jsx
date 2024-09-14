@@ -22,12 +22,6 @@ function PersonalDetails(props) {
   return (
     <>
       <h2>Personal Details</h2>
-      <p>{formData.firstName}</p>
-      <p>{formData.surname}</p>
-      <p>{formData.email}</p>
-      <p>{formData.number}</p>
-      <p>{formData.location}</p>
-
       <form className="personal-details-container" onSubmit={handleSubmit}>
         <label>
           First Name:

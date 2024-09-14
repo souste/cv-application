@@ -3,7 +3,9 @@ function CVTemplate({ personalData }) {
     <>
       <div className="cv-template-container">
         <div className="cv-template-top">
-          <h2 className="cv-name">{personalData.firstName}</h2>
+          <h2 className="cv-name">
+            {personalData.firstName} {personalData.surname}
+          </h2>
           <div className="personal-info-container">
             <p>{personalData.email}</p>
             <p>{personalData.number}</p>
