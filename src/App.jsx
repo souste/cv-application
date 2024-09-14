@@ -1,4 +1,4 @@
-// import { useState } from "react";
+import { useState } from "react";
 import PersonalDetails from "./PersonalDetails";
 import Education from "./Education";
 import Experience from "./Experience";
@@ -7,8 +7,10 @@ import CVTemplate from "./CVTemplate";
 import "./App.css";
 
 function App() {
+  const [personalData, setPersonalData] = useState({});
+
   const getPersonalData = (data) => {
-    console.log("This is the first name coming from App", data);
+    setPersonalData(data);
   };
   return (
     <>
@@ -19,7 +21,7 @@ function App() {
           <Experience />
         </div>
         <div className="template-container">
-          <CVTemplate />
+          <CVTemplate personalData={personalData} />
         </div>
       </div>
     </>
