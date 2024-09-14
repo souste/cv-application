@@ -1,4 +1,4 @@
-function CVTemplate({ personalData }) {
+function CVTemplate({ personalData, experienceData, educationData }) {
   return (
     <>
       <div className="cv-template-container">
@@ -16,32 +16,33 @@ function CVTemplate({ personalData }) {
           <h2 className="cv-header">Experience</h2>
           <div className="experience-info-container">
             <div className="company-start-end-date">
-              <h3 className="company-name">THE FROG COMPANY:</h3>
-              <h3 className="start-date">JAN 2024</h3>
-              <h3> - PRESENT</h3>
+              <h3 className="company-name">{experienceData.companyName}:</h3>
+              <h3 className="start-date">{experienceData.startDate}</h3>
+              <h3>- {experienceData.endDate}</h3>
             </div>
-            <h3 className="job-title">Software Developer</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-              mollit anim id est laborum.
-            </p>
+            <h3 className="job-title">{experienceData.position}</h3>
+            <p>{experienceData.description}</p>
           </div>
         </div>
         <div className="cv-education-container">
           <h2 className="cv-header">Education</h2>
           <div className="school-start-end-date">
-            <h3 className="school-name">UNIVERSITY OF LIVERPOOL:</h3>
-            <h3 className="start-date">SEP 2002 </h3>
-            <h3>- JUL 2005</h3>
+            <h3 className="school-name">{educationData.school}:</h3>
+            <h3 className="start-date">{educationData.startDate}</h3>
+            <h3>- {educationData.endDate}</h3>
           </div>
-          <h3 className="degree">BSc Economics</h3>
+          <h3 className="degree">{educationData.degree}:</h3>
+          <h3>{educationData.classification}</h3>
         </div>
       </div>
     </>
   );
 }
+
+// Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+//               dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+//               ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+//               fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+//               mollit anim id est laborum.
 
 export default CVTemplate;
