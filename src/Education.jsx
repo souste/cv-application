@@ -35,7 +35,14 @@ function Education(props) {
 
         <label>
           Classification:
-          <input type="number" name="classification" value={formData.classification} onChange={handleChange} />
+          {/* <input type="number" name="classification" value={formData.classification} onChange={handleChange} /> */}
+          <select name="classification" value={formData.classification} onChange={handleChange}>
+            <option value="First">First-Class Honours (1st)</option>
+            <option value="2:1">Upper Second-Class Honours (2:1)</option>
+            <option value="2:2">Lower Second-Class Honours (2:2)</option>
+            <option value="Third">Third-Class Honours (3rd)</option>
+            <option value="Pass">Pass</option>
+          </select>
         </label>
 
         <label>

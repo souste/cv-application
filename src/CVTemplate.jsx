@@ -31,8 +31,10 @@ function CVTemplate({ personalData, experienceData, educationData }) {
             <h3 className="start-date">{educationData.startDate}</h3>
             <h3>- {educationData.endDate}</h3>
           </div>
-          <h3 className="degree">{educationData.degree}:</h3>
-          <h3>{educationData.classification}</h3>
+          <div className="degree-classification">
+            <h3 className="degree">{educationData.degree}:</h3>
+            <h3>Classification: {educationData.classification}</h3>
+          </div>
         </div>
       </div>
     </>
