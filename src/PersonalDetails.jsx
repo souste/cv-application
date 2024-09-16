@@ -23,9 +23,9 @@ function PersonalDetails(props) {
     <>
       <div>
         <h2>Personal Details</h2>
-        <button onClick={props.onClick}>{props.editOpen ? "Hide" : "Edit"}</button>
+        <button onClick={props.onClick}>{props.editPersonalOpen ? "Hide" : "Edit"}</button>
       </div>
-      {props.editOpen && (
+      {props.editPersonalOpen && (
         <form className="personal-details-container" onSubmit={handleSubmit}>
           <label>
             First Name:

@@ -24,41 +24,43 @@ function Experience(props) {
     <>
       <div>
         <h2>Experience</h2>
-        <button>Edit</button>
+        <button onClick={props.onClick}>{props.editExperienceOpen ? "Hide" : "Edit"}</button>
       </div>
-      <form className="experience-container" onSubmit={handleSubmit}>
-        <label>
-          Company Name:
-          <input type="text" name="companyName" value={setFormData.companyName} onChange={handleChange} />
-        </label>
+      {props.editExperienceOpen && (
+        <form className="experience-container" onSubmit={handleSubmit}>
+          <label>
+            Company Name:
+            <input type="text" name="companyName" value={setFormData.companyName} onChange={handleChange} />
+          </label>
 
-        <label>
-          Position:
-          <input type="text" name="position" value={setFormData.position} onChange={handleChange} />
-        </label>
+          <label>
+            Position:
+            <input type="text" name="position" value={setFormData.position} onChange={handleChange} />
+          </label>
 
-        <label>
-          Start Date:
-          <input type="date" name="startDate" value={setFormData.startDate} onChange={handleChange} />
-        </label>
+          <label>
+            Start Date:
+            <input type="date" name="startDate" value={setFormData.startDate} onChange={handleChange} />
+          </label>
 
-        <label>
-          End Date:
-          <input type="date" name="endDate" value={setFormData.endDate} onChange={handleChange} />
-        </label>
+          <label>
+            End Date:
+            <input type="date" name="endDate" value={setFormData.endDate} onChange={handleChange} />
+          </label>
 
-        <label>
-          Location:
-          <input type="text" name="location" value={setFormData.location} onChange={handleChange} />
-        </label>
+          <label>
+            Location:
+            <input type="text" name="location" value={setFormData.location} onChange={handleChange} />
+          </label>
 
-        <label>
-          Description:
-          <textarea name="description" value={setFormData.description} onChange={handleChange}></textarea>
-        </label>
+          <label>
+            Description:
+            <textarea name="description" value={setFormData.description} onChange={handleChange}></textarea>
+          </label>
 
-        <button type="submit">Submit</button>
-      </form>
+          <button type="submit">Submit</button>
+        </form>
+      )}
     </>
   );
 }
