@@ -1,5 +1,11 @@
 # React + Vite
 
+CV Application
+
+https://souste-cv-application.netlify.app/
+
+Very basic CV creation application
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
