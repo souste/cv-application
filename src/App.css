@@ -1,5 +1,6 @@
 .outer-container {
   display: flex;
+  margin-left: 20px;
 }
 
 /* could the form containers be combined? */
@@ -23,6 +24,7 @@
   border: 2px solid black;
   width: 800px;
   height: 1000px;
+  margin-left: 100px;
 }
 
 .cv-template-top {
@@ -67,4 +69,35 @@
 .cv-education-container {
   padding-left: 10px;
   padding-right: 10px;
+}
+
+/* FORM */
+
+label {
+  margin-bottom: 5px;
+  font-family: "Manrope", sans-serif;
+}
+
+input,
+select {
+  background-color: #ffffff;
+  width: 300px;
+  padding: 7px;
+  border-radius: 3px;
+  font-size: 14px;
+  border-color: #e5e7eb;
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  display: flex;
+  width: 300px;
+  height: 200px;
+}
+
+button {
+  width: 100px;
+  color: lightblue;
+  border: 2px solid black;
 }

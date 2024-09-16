@@ -15,17 +15,17 @@ function App() {
     location: "Manchester",
   });
   const [educationData, setEducationData] = useState({
-    school: "University of Manchester",
-    degree: "BSc Chemistry",
+    school: "School/Universty Name",
+    degree: "Degree Name",
     classification: "First",
-    startDate: "2020-09-01",
-    endDate: "2023-07-01",
+    startDate: "Start Date",
+    endDate: "End Date",
   });
   const [experienceData, setExperienceData] = useState({
-    companyName: "The Frog Company",
-    position: "Astrophysicist",
-    startDate: "2020-09-01",
-    endDate: "2023-07-01",
+    companyName: "Company Name",
+    position: "Job Role",
+    startDate: "Start Date",
+    endDate: "End Date",
     location: "Manchester",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
