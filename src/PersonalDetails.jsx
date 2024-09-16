@@ -17,6 +17,7 @@ function PersonalDetails(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
     props.onSubmit(formData);
+    setFormData({ ...formData, firstName: "", surname: "", email: "", number: "", location: "" });
   };
 
   return (

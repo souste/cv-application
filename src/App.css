@@ -47,6 +47,13 @@
   background-color: lightgray;
 }
 
+.cv-name {
+  font-size: 40px;
+}
+
+.personal-data {
+  font-size: 20px;
+}
 .company-start-end-date,
 .school-start-end-date {
   display: flex;
@@ -61,8 +68,7 @@
   margin-right: 5px;
 }
 
-.job-title,
-.degree {
+.job-title {
   margin: 0;
 }
 
@@ -72,6 +78,18 @@
   padding-right: 10px;
 }
 
+.degree-classification {
+  display: flex;
+}
+
+.degree {
+  margin-right: 10px;
+}
+
+.degree,
+.classification {
+  margin-top: 0;
+}
 /* FORM */
 
 label {
@@ -96,9 +114,6 @@ textarea {
   width: 300px;
   height: 200px;
 }
-
-/* <!-- HTML !-->
-<button class="button-15" role="button">Button 15</button> */
 
 /* CSS */
 button {

@@ -17,6 +17,7 @@ function Education(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
     props.onSubmit(formData);
+    setFormData({ ...formData, school: "", degree: "", classification: "", startDate: "", endDate: "" });
   };
 
   return (

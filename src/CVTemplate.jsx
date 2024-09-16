@@ -1,4 +1,4 @@
-function CVTemplate({ personalData, experienceData, educationData }) {
+function CVTemplate({ personalData, experienceData1, experienceData2, educationData }) {
   return (
     <>
       <div className="cv-template-container">
@@ -7,21 +7,30 @@ function CVTemplate({ personalData, experienceData, educationData }) {
             {personalData.firstName} {personalData.surname}
           </h2>
           <div className="personal-info-container">
-            <p>{personalData.email}</p>
-            <p>{personalData.number}</p>
-            <p>{personalData.location}</p>
+            <p className="personal-data">{personalData.email}</p>
+            <p className="personal-data">{personalData.number}</p>
+            <p className="personal-data">{personalData.location}</p>
           </div>
         </div>
         <div className="cv-experience-container">
           <h2 className="cv-header">Experience</h2>
           <div className="experience-info-container">
             <div className="company-start-end-date">
-              <h3 className="company-name">{experienceData.companyName}:</h3>
-              <h3 className="start-date">{experienceData.startDate}</h3>
-              <h3>- {experienceData.endDate}</h3>
+              <h3 className="company-name">{experienceData1.companyName}:</h3>
+              <h3 className="start-date">{experienceData1.startDate}</h3>
+              <h3>- {experienceData1.endDate}</h3>
             </div>
-            <h3 className="job-title">{experienceData.position}</h3>
-            <p>{experienceData.description}</p>
+            <h3 className="job-title">{experienceData1.position}</h3>
+            <p>{experienceData1.description}</p>
+          </div>
+          <div className="experience-info-container">
+            <div className="company-start-end-date">
+              <h3 className="company-name">{experienceData2.companyName}:</h3>
+              <h3 className="start-date">{experienceData2.startDate}</h3>
+              <h3>- {experienceData2.endDate}</h3>
+            </div>
+            <h3 className="job-title">{experienceData2.position}</h3>
+            <p>{experienceData2.description}</p>
           </div>
         </div>
         <div className="cv-education-container">
@@ -33,18 +42,12 @@ function CVTemplate({ personalData, experienceData, educationData }) {
           </div>
           <div className="degree-classification">
             <h3 className="degree">{educationData.degree}:</h3>
-            <h3>Classification: {educationData.classification}</h3>
+            <h3 className="classification">{educationData.classification}</h3>
           </div>
         </div>
       </div>
     </>
   );
 }
-
-// Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-//               dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-//               ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-//               fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-//               mollit anim id est laborum.
 
 export default CVTemplate;

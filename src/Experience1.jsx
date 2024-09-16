@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Experience(props) {
+function Experience1(props) {
   const [formData, setFormData] = useState({
     companyName: "",
     position: "",
@@ -18,44 +18,53 @@ function Experience(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
     props.onSubmit(formData);
+    setFormData({
+      ...formData,
+      companyName: "",
+      position: "",
+      startDate: "",
+      endDate: "",
+      location: "",
+      description: "",
+    });
   };
 
   return (
     <>
       <div>
-        <h2>Experience</h2>
-        <button onClick={props.onClick}>{props.editExperienceOpen ? "Hide" : "Edit"}</button>
+        <h2>Experience 1</h2>
+        <button onClick={props.onClick}>{props.editExperience1Open ? "Hide" : "Edit"}</button>
       </div>
-      {props.editExperienceOpen && (
+      {props.editExperience1Open && (
         <form className="experience-container" onSubmit={handleSubmit}>
           <label>
             Company Name:
-            <input type="text" name="companyName" value={setFormData.companyName} onChange={handleChange} />
+            <input type="text" name="companyName" value={formData.companyName} onChange={handleChange} />
           </label>
 
           <label>
             Position:
-            <input type="text" name="position" value={setFormData.position} onChange={handleChange} />
+            <input type="text" name="position" value={formData.position} onChange={handleChange} />
           </label>
 
           <label>
             Start Date:
-            <input type="date" name="startDate" value={setFormData.startDate} onChange={handleChange} />
+            <input type="date" name="startDate" value={formData.startDate} onChange={handleChange} />
           </label>
 
           <label>
             End Date:
-            <input type="date" name="endDate" value={setFormData.endDate} onChange={handleChange} />
+            <input type="date" name="endDate" value={formData.endDate} onChange={handleChange} />
           </label>
 
           <label>
             Location:
-            <input type="text" name="location" value={setFormData.location} onChange={handleChange} />
+            <input type="text" name="location" value={formData.location} onChange={handleChange} />
           </label>
 
           <label>
             Description:
-            <textarea name="description" value={setFormData.description} onChange={handleChange}></textarea>
+            <textarea name="description" value={formData.description} onChange={handleChange}></textarea>
           </label>
 
           <button type="submit">Submit</button>
@@ -65,4 +74,4 @@ function Experience(props) {
   );
 }
 
-export default Experience;
+export default Experience1;
