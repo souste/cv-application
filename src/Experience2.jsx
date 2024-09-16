@@ -32,7 +32,7 @@ function Experience2(props) {
   return (
     <>
       <div>
-        <h2>Experience 2</h2>
+        <h2>Experience Part Two</h2>
         <button onClick={props.onClick}>{props.editExperienceOpen ? "Hide" : "Edit"}</button>
       </div>
       {props.editExperienceOpen && (
@@ -58,16 +58,14 @@ function Experience2(props) {
           </label>
 
           <label>
-            Location:
-            <input type="text" name="location" value={formData.location} onChange={handleChange} />
-          </label>
-
-          <label>
             Description:
             <textarea name="description" value={formData.description} onChange={handleChange}></textarea>
           </label>
 
           <button type="submit">Submit</button>
+          <button onClick={props.onDelete} className="delete-button">
+            Delete
+          </button>
         </form>
       )}
     </>

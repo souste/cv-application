@@ -32,7 +32,7 @@ function Experience1(props) {
   return (
     <>
       <div>
-        <h2>Experience 1</h2>
+        <h2>Experience Part One</h2>
         <button onClick={props.onClick}>{props.editExperience1Open ? "Hide" : "Edit"}</button>
       </div>
       {props.editExperience1Open && (
@@ -55,11 +55,6 @@ function Experience1(props) {
           <label>
             End Date:
             <input type="date" name="endDate" value={formData.endDate} onChange={handleChange} />
-          </label>
-
-          <label>
-            Location:
-            <input type="text" name="location" value={formData.location} onChange={handleChange} />
           </label>
 
           <label>

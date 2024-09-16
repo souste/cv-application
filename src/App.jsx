@@ -47,6 +47,8 @@ function App() {
   const [editExperience1Open, setEditExperience1Open] = useState(false);
   const [editExperience2Open, setEditExperience2Open] = useState(false);
 
+  const [deleteExperience2, setDeleteExperience2] = useState(false);
+
   const getPersonalData = (data) => {
     setPersonalData(data);
   };
@@ -79,6 +81,11 @@ function App() {
     setEditExperience2Open(!editExperience2Open);
   };
 
+  const handleDeleteExperience2 = () => {
+    console.log("Getting deleted from App");
+    setDeleteExperience2(!deleteExperience2);
+  };
+
   return (
     <>
       <div className="outer-container">
@@ -97,6 +104,7 @@ function App() {
             onSubmit={getExperience2Data}
             onClick={handleExperience2EditOpen}
             editExperienceOpen={editExperience2Open}
+            onDelete={handleDeleteExperience2}
           />
           <Education
             onSubmit={getEducationData}
@@ -110,6 +118,8 @@ function App() {
             educationData={educationData}
             experienceData1={experienceData1}
             experienceData2={experienceData2}
+            handleDeleteExperience2={handleDeleteExperience2}
+            deleteExperience2={deleteExperience2}
           />
         </div>
       </div>
