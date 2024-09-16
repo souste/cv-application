@@ -21,7 +21,10 @@ function Education(props) {
 
   return (
     <>
-      <h2>Education</h2>
+      <div>
+        <h2>Education</h2>
+        <button>Edit</button>
+      </div>
       <form className="education-container" onSubmit={handleSubmit}>
         <label>
           School/Universty:

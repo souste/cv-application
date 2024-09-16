@@ -22,7 +22,10 @@ function Experience(props) {
 
   return (
     <>
-      <h2>Experience</h2>
+      <div>
+        <h2>Experience</h2>
+        <button>Edit</button>
+      </div>
       <form className="experience-container" onSubmit={handleSubmit}>
         <label>
           Company Name:

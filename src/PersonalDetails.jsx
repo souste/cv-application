@@ -21,35 +21,40 @@ function PersonalDetails(props) {
 
   return (
     <>
-      <h2>Personal Details</h2>
-      <form className="personal-details-container" onSubmit={handleSubmit}>
-        <label>
-          First Name:
-          <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} />
-        </label>
+      <div>
+        <h2>Personal Details</h2>
+        <button onClick={props.onClick}>{props.editOpen ? "Hide" : "Edit"}</button>
+      </div>
+      {props.editOpen && (
+        <form className="personal-details-container" onSubmit={handleSubmit}>
+          <label>
+            First Name:
+            <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} />
+          </label>
 
-        <label>
-          Surname:
-          <input type="text" name="surname" value={formData.surname} onChange={handleChange} />
-        </label>
+          <label>
+            Surname:
+            <input type="text" name="surname" value={formData.surname} onChange={handleChange} />
+          </label>
 
-        <label>
-          Email
-          <input type="email" name="email" value={formData.email} onChange={handleChange} />
-        </label>
+          <label>
+            Email
+            <input type="email" name="email" value={formData.email} onChange={handleChange} />
+          </label>
 
-        <label>
-          Phone:
-          <input type="number" name="number" value={formData.number} onChange={handleChange} />
-        </label>
+          <label>
+            Phone:
+            <input type="number" name="number" value={formData.number} onChange={handleChange} />
+          </label>
 
-        <label>
-          Location:
-          <input type="text" name="location" value={formData.location} onChange={handleChange} />
-        </label>
+          <label>
+            Location:
+            <input type="text" name="location" value={formData.location} onChange={handleChange} />
+          </label>
 
-        <button type="submit">Submit</button>
-      </form>
+          <button type="submit">Submit</button>
+        </form>
+      )}
     </>
   );
 }

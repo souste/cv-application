@@ -31,6 +31,8 @@ function App() {
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   });
 
+  const [editOpen, setEditOpen] = useState(false);
+
   const getPersonalData = (data) => {
     setPersonalData(data);
   };
@@ -45,11 +47,16 @@ function App() {
     setEducationData(data);
   };
 
+  const handleEditOpen = () => {
+    console.log("I'm a little Jeevy");
+    setEditOpen(!editOpen);
+  };
+
   return (
     <>
       <div className="outer-container">
         <div className="form-container">
-          <PersonalDetails onSubmit={getPersonalData} />
+          <PersonalDetails onSubmit={getPersonalData} onClick={handleEditOpen} editOpen={editOpen} />
           <Experience onSubmit={getExperienceData} />
           <Education onSubmit={getEducationData} />
         </div>
